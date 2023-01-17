@@ -3,6 +3,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Handlee', cursive;
 }
 body {
     background: #1d1d1d;
@@ -67,26 +68,12 @@ ul li {
 
 @media screen and (min-width:785px) {
 
+   
+  
 
-   .logo {
-    display:flex;
-    flex-direction: column;
-   }
+    
 
-    .new {
-        max-width: 90%;
-        position:absolute;
-        right: 0;
-        
-        color: white;
-        display:flex;
-        justify-content: center;
-
-    }
-
-    .new p {
-        width: 50%;
-    }
+    
     .transition-1 {
             position: fixed;
             top: 0;
@@ -108,35 +95,131 @@ ul li {
     ul li {
         font-size: 2rem;
     }
-
     .page-container {
-        display:flex;
-        flex-direction: row;
+        display: flex;
+        
+        
+        
+        
     }
+    
     .nav-toggle {
         display:none;
     }
+    .container {
+        
+        width: 90%;
+        right: 0;
+        position:absolute;
+        color: white;
+    }
+    
+    .container {
+        
+    }
+    .testing {
+        color: rgb(110, 110, 110);
+        font-size: 1rem;
+        font-style: italic;
+        padding: 2rem;
+    }
+    .letters:before {
+        content: "<p> Welcome to my site <p>";
+        animation: animate 10s;
+        animation-iteration-count:1;
+    }
 
-   
+    @keyframes animate {
+        0% {content:"<"}
+        4.7% {content:"<p"}
+        7.7% {content:"<p>"}
+        12.4% {content:"<p> W"}
+        17.1% {content:"<p> We"}
+        21.8% {content:"<p> Wel"}
+        26.5% {content:"<p> Welc"}
+        31.2% {content:"<p> Welco"}
+        35.9% {content:"<p> Welcom"}
+        40.6% {content:"<p> Welcome"}
+        45.3% {content:"<p> Welcome t"}
+        50% {content:"<p> Welcome to"}
+        54.7% {content:"<p> Welcome to m"}
+        59.4% {content:"<p> Welcome to my"}
+        64.1% {content:"<p> Welcome to my s"}
+        68.8% {content:"<p> Welcome to my si"}
+        73.5% {content:"<p> Welcome to my sit"}
+        78.2% {content:"<p> Welcome to my site"}
+        82.9% {content:"<p> Welcome to my site <"}
+        87% {content:"<p> Welcome to my site <p"}
+        92.3% {content:"<p> Welcome to my site <p>"}
+    }
+    .intro {
+        
+        width: 100%;
+        height: 600px;
+        margin-top: 50px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        
+
+    }
+    .intro h1 {
+        font-size: 3rem;
+        margin: 10px 0;
+    }
+    .intro p {
+        margin: 20px 0;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    .second {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+        
+        height: 600px;
+        
+    }
+    .second p {
+        font-size: 1.5rem;
+        width: 60%;
+        margin: 50px 0;
+        letter-spacing: 3px;
+    }
     .nav-center {
         
         width: 8%;
-        height: 900px;
+        height: 1000px;
         padding: 0;
-        position: fixed;
         
         
+        position:fixed;
         display: flex;
         align-items: center;
         flex-direction: column;
     
-        justify-content: space-around;
+        
         
     }
     
     .nav-header {
-        padding: 0;
+        width: 100%;
     
+    }
+    .logo {
+        display: flex;
+        flex-direction: column;
+        background: rgb(29, 29, 29);
+        width: 100%;
+        padding: 1.5rem;
+        
+        
     }
     .nav-header h3 {
         font-size: 2rem;
@@ -152,13 +235,16 @@ ul li {
         width: 100%;
         padding:0;
         height: auto;
+        margin-top:50px;
+        
     
     
     }
 
    
     ul li a {
-        display: inline-block;
+            display: inline-block;
+            font-size: 1.5rem;
             width: 100%;
             padding: 0;
             width: 100%;
@@ -167,6 +253,17 @@ ul li {
         
         
         
+    }
+
+    .row {
+        opacity: 0;
+        transform: scale(0.1);
+        transition: all 1s ease-in-out;
+    }
+    
+    .active {
+        opacity: 1;
+        transform: scale(1);
     }
     
 }
