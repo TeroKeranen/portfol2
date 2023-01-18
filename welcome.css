@@ -12,6 +12,19 @@ ul li {
     list-style: none;
     font-size: 1rem;
 }
+ul li button {
+    display: inline-block;
+    background: transparent;
+    color: white;
+    border: transparent;
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 10px;
+    width: 100%;
+    border-top: 0.5px solid rgb(87, 85, 85);
+    border-bottom: 0.5px solid rgb(121, 118, 118);
+}
 .nav-center {
     background: #181818;
 }
@@ -24,16 +37,7 @@ ul li {
     padding: 1.5rem;
 }
 
-.animate {
-    position: absolute;
-    left:11px;
-    animation-name: testi;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    
-    
 
-}
 
 .nav-toggle {
     cursor:pointer;
@@ -66,28 +70,183 @@ ul li {
     /* asetetaan starfield functiota varten*/
     top: 0;
     right: 0;
-    width: 90%;
+    width: 100%;
     right: 0;
     position: absolute;
     color: white;
+    
 }
 
-@keyframes testi {
-    from {transform: rotate(0);}
-    to {transform: rotate(-20deg);}
+.testing {
+
+    display: flex;
+    justify-content: center;
+
+    color: rgb(110, 110, 110);
+    font-size: 1rem;
+    font-style: italic;
+    padding: 0.5rem;
+
+
 }
+
+.letters:before {
+    content: "<p> Welcome to my site <p>";
+    animation: animate 10s;
+    animation-iteration-count: 1;
+}
+
+@keyframes animate {
+    0% {content: "<"}
+
+    4.7% {content: "<p"}
+
+    7.7% {content: "<p>"}
+
+    12.4% {content: "<p> W"}
+
+    17.1% {content: "<p> We"}
+
+    21.8% {content: "<p> Wel"}
+
+    26.5% {content: "<p> Welc"}
+
+    31.2% {content: "<p> Welco"}
+
+    35.9% {content: "<p> Welcom"}
+
+    40.6% {content: "<p> Welcome"}
+
+    45.3% {content: "<p> Welcome t"}
+
+    50% {content: "<p> Welcome to"}
+
+    54.7% {content: "<p> Welcome to m"}
+
+    59.4% {content: "<p> Welcome to my"}
+
+    64.1% {content: "<p> Welcome to my s"}
+
+    68.8% {content: "<p> Welcome to my si"}
+
+    73.5% { content: "<p> Welcome to my sit"}
+
+    78.2% {content: "<p> Welcome to my site"}
+
+    82.9% {content: "<p> Welcome to my site <"}
+
+    87% {content: "<p> Welcome to my site <p"}
+
+    92.3% {content: "<p> Welcome to my site <p>"}
+}
+
+.intro {
+
+
+    
+    height: 400px;
+    margin: 40px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.intro h1 {
+    
+    font-size: 3rem;
+    margin: 10px 0;
+}
+
+
+
+.intro p {
+    width: 80%;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+
+.second {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.second p {
+    width: 80%;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
 
 
 
 @media screen and (min-width:785px) {
 
    
-  
+    .nav-center {
+            z-index: 10;
+            width: 8%;
+            height: 1000px;
+            padding: 0;
     
-
-    .canvas-wrap {
-        position:relative;
+    
+            position: fixed;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+    
+    
+    
+        }
+    
+        .nav-header {
+            width: 100%;
+    
+        }
+    
+        .logo {
+            display: flex;
+            flex-direction: column;
+            background: rgb(29, 29, 29);
+            width: 100%;
+            padding: 1.5rem;
+    
+    
+        }
+    
+        .nav-header h3 {
+            font-size: 2rem;
+    
+        }
+    
+        .nav-toggle {
+            display: none;
+        }
+    
+        .links {
+    
+            width: 100%;
+            padding: 0;
+            height: auto;
+            margin-top: 50px;
+    
+    
+    
+        }
+    .testing {
+        margin-top: 30px;
     }
+
     
     
     
@@ -135,82 +294,27 @@ ul li {
     }
     
     
-    .testing {
-        
-        display:flex;
-        
-        color: rgb(110, 110, 110);
-        font-size: 1rem;
-        font-style: italic;
-        padding: 3rem;
-        
-        
-    }
-    .letters:before {
-        content: "<p> Welcome to my site <p>";
-        animation: animate 10s;
-        animation-iteration-count:1;
-    }
-  
-    @keyframes animate {
-        0% {content:"<"}
-        4.7% {content:"<p"}
-        7.7% {content:"<p>"}
-        12.4% {content:"<p> W"}
-        17.1% {content:"<p> We"}
-        21.8% {content:"<p> Wel"}
-        26.5% {content:"<p> Welc"}
-        31.2% {content:"<p> Welco"}
-        35.9% {content:"<p> Welcom"}
-        40.6% {content:"<p> Welcome"}
-        45.3% {content:"<p> Welcome t"}
-        50% {content:"<p> Welcome to"}
-        54.7% {content:"<p> Welcome to m"}
-        59.4% {content:"<p> Welcome to my"}
-        64.1% {content:"<p> Welcome to my s"}
-        68.8% {content:"<p> Welcome to my si"}
-        73.5% {content:"<p> Welcome to my sit"}
-        78.2% {content:"<p> Welcome to my site"}
-        82.9% {content:"<p> Welcome to my site <"}
-        87% {content:"<p> Welcome to my site <p"}
-        92.3% {content:"<p> Welcome to my site <p>"}
-    }
+    
     .intro {
         
-        width: 100%;
+        
         height: 600px;
-        margin-top: 10px;
-        
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
-        
+        margin-top: 10px;  
 
     }
-    .intro h1 {
-        font-size: 3rem;
-        margin: 10px 0;
-    }
+    
+    
     .intro p {
+        
+        
         margin: 20px 0;
-        font-size: 1.5rem;
-        letter-spacing: 2px;
+        
     }
 
-    .fav {
-        display:flex;
-        flex-direction: column;
-        margin: 50px 0;
-        text-align: center;
-    }
+    
 
     .second {
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        
         margin: 50px 0;
         
         height: 600px;
@@ -222,54 +326,7 @@ ul li {
         margin: 50px 0;
         letter-spacing: 3px;
     }
-    .nav-center {
-        z-index: 10;
-        width: 8%;
-        height: 1000px;
-        padding: 0;
-        
-        
-        position:fixed;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
     
-        
-        
-    }
-    
-    .nav-header {
-        width: 100%;
-    
-    }
-    .logo {
-        display: flex;
-        flex-direction: column;
-        background: rgb(29, 29, 29);
-        width: 100%;
-        padding: 1.5rem;
-        
-        
-    }
-    .nav-header h3 {
-        font-size: 2rem;
-        
-    }
-    
-    .nav-toggle {
-        display: none;
-    }
-    
-    .links {
-        
-        width: 100%;
-        padding:0;
-        height: auto;
-        margin-top:50px;
-        
-    
-    
-    }
 
    
     
