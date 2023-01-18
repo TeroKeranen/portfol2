@@ -168,8 +168,8 @@ function pageTransition () { // Käytetään tätä functiota sivuvaihdoissa
                     }
                     if ( counter < 0) {
                         clearInterval(interval)
-                        if (currTarget.contains("about")) {
-                            window.location = "http://127.0.0.1:5500/about.html"
+                        if (currTarget.contains("projects")) {
+                            window.location = "http://127.0.0.1:5500/projects.html"
                         }
                         if (currTarget.contains("login")) {
                             window.location = "http://127.0.0.1:5500/login.html"
