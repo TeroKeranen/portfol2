@@ -25,6 +25,36 @@ ul li button {
     border-top: 0.5px solid rgb(87, 85, 85);
     border-bottom: 0.5px solid rgb(121, 118, 118);
 }
+
+.transition-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+    background-color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease-in;
+
+}
+
+.transition-1.is-active {
+    opacity: 1;
+    pointer-events: all;
+}
+.row {
+    opacity: 0;
+    transform: scale(0.1);
+    transition: all 1s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+    transform: scale(1);
+
+}
 .nav-center {
     background: #181818;
 }
@@ -187,6 +217,32 @@ ul li button {
     letter-spacing: 2px;
 }
 
+.row {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.col {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 40px 0;
+
+}
+
+.col p {
+    width: 80%;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
 
 
 
@@ -207,42 +263,42 @@ ul li button {
     
     
     
-        }
+    }
     
-        .nav-header {
-            width: 100%;
+    .nav-header {
+        width: 100%;
     
-        }
+    }
     
-        .logo {
-            display: flex;
-            flex-direction: column;
-            background: rgb(29, 29, 29);
-            width: 100%;
-            padding: 1.5rem;
-    
-    
-        }
-    
-        .nav-header h3 {
-            font-size: 2rem;
-    
-        }
-    
-        .nav-toggle {
-            display: none;
-        }
-    
-        .links {
-    
-            width: 100%;
-            padding: 0;
-            height: auto;
-            margin-top: 50px;
+    .logo {
+        display: flex;
+        flex-direction: column;
+        background: rgb(29, 29, 29);
+        width: 100%;
+        padding: 1.5rem;
     
     
+    }
+
+    .nav-header h3 {
+        font-size: 2rem;
     
-        }
+    }
+    
+    .nav-toggle {
+        display: none;
+    }
+    
+    .links {
+    
+        width: 100%;
+        padding: 0;
+        height: auto;
+        margin-top: 50px;
+    
+    
+    
+    }
     .testing {
         margin-top: 30px;
     }
@@ -251,23 +307,25 @@ ul li button {
     
     
     .transition-1 {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 101;
-            background-color: white;
-            opacity: 0;
-            pointer-events: none;
-            transition: 0.3s ease-in;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 101;
+        background-color: white;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease-in;
     
-        }
+    }
     
     .transition-1.is-active {
         opacity: 1;
         pointer-events: all;
     }
+
+    
     ul li {
         font-size: 2rem;
     }
@@ -330,34 +388,12 @@ ul li button {
 
    
     
-    ul li button {
-            display: inline-block;
-            background: transparent;
-            color: white;
-            border: transparent;
-            cursor: pointer;
-            font-size: 1.5rem;
-            width: 100%;
-            padding: 10px;
-            width: 100%;
-            border-top: 0.5px solid rgb(87, 85, 85);
-            border-bottom: 0.5px solid rgb(121, 118, 118);
-    }
+    
 
     ul li button:hover {
         color: blue;
     }
 
-    .row {
-        opacity: 0;
-        transform: scale(0.1);
-        transition: all 1s ease-in-out;
-    }
     
-    .active {
-        opacity: 1;
-        transform: scale(1);
-        
-    }
     
 }

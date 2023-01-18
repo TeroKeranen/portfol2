@@ -142,8 +142,9 @@ function startCountdown() {
 ///////// Page Transition /////////////
 //////////////////////////////////////
 function pageTransition () { // Käytetään tätä functiota sivuvaihdoissa
+
     // Aina sivun ladattaessa timeoutti poistaa is-active tyylin transition classista
-    let w = 0;
+    
     window.onload = () => {
 
 
@@ -202,6 +203,29 @@ function pageTransition () { // Käytetään tätä functiota sivuvaihdoissa
 
 }
 
+// Funktio jolla tulee tekstit näkyviin kun tarpeeksi scrollaa
+function scrollAnimation () {
+    window.addEventListener('scroll', () => {
+
+        // Otetaan sivusotn row classit omaan muuttujaan
+        let contents = document.querySelectorAll('.row');
+        //Otetaan windowsin innerheight omaan muuttujaan
+        let screenPosition = window.innerHeight;
+
+        // Luupataan row classit läpi forEachloopilla
+        contents.forEach((e) => {
+            // Otetaan e:n elementteistä tietoa omaan muuttujaan
+            let contentPosition = e.getBoundingClientRect().top;
+
+            if(contentPosition < screenPosition) {
+                e.classList.add('active');
+
+            } else {
+                e.classList.remove('active');
+            }
+        })
+    })
+}
 
 
 // let transition_el = document.querySelector('.transition')
@@ -212,9 +236,9 @@ function main () {
     if ( window.location.href === "http://127.0.0.1:5500/") {
         
 
-        // starField();
+        
         startCountdown();
-        // welcomePageTransition();
+        
      
     // muilla sivuilla käynnistyy sivunvaihto ja navbar functiot
     } else {
@@ -225,25 +249,9 @@ function main () {
         
     }
 
-
+    scrollAnimation();
     
     
-    
-    window.addEventListener('scroll', () => {
-        let content = document.querySelector('.row');
-        
-        let contentPosition = content.getBoundingClientRect().top;
-        
-        let screenPosition = window.innerHeight ;
-
-        
-
-        if(contentPosition < screenPosition) {
-            content.classList.add('active')
-        } else {
-            content.classList.remove('active');
-        }
-    })
 
     
 }
