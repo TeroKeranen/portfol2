@@ -130,67 +130,7 @@ function startCountdown() {
 ////////////////////////////////////////
 ///////// Page Transition /////////////
 //////////////////////////////////////
-function pageTransition () { // Käytetään tätä functiota sivuvaihdoissa
 
-    // Aina sivun ladattaessa timeoutti poistaa is-active tyylin transition classista
-    
-    window.onload = () => {
-
-
-        let pageContainer = document.querySelector('.page-container') // Otetaan welcome pagelta class page-container omaan muuttujaan
-        let height = pageContainer.scrollHeight; // Otetaan classin page-container scrollheight omaan muuttujaan jotta sitä voidaan käyttää apuna starField function kanssa
-        let width = pageContainer.scrollWidth; // Otetaan classin page-container scrollheight omaan muuttujaan jotta sitä voidaan käyttää apuna starField function kanssa
-        let transition_el = document.querySelector('.transition') // otetaan class transition omaan muuttujaan jotta siitä voidaan poistaa apu classeja
-        starField(10, height,width)
-        let a = document.querySelectorAll("button")
-
-        a.forEach((e) => {
-            
-            e.addEventListener('click', function (e) {
-                const currTarget = e.currentTarget.classList;
-                console.log(currTarget);
-                let counter = 10;
-                const interval = setInterval(() => {
-                    counter--
-                    if (counter <3) {
-                        starField(300,height,width);
-                    }
-                    if ( counter < 0) {
-                        clearInterval(interval)
-                        if (currTarget.contains("projects")) {
-                            window.location = "http://127.0.0.1:5500/projects.html"
-                        }
-                        if (currTarget.contains("login")) {
-                            window.location = "http://127.0.0.1:5500/login.html"
-                        }
-                        if (currTarget.contains("register")) {
-                            window.location = "http://127.0.0.1:5500/register.html"
-                        }
-                        
-
-                    }
-                    
-                }, 100);
-            })
-        })
-        
-
-        
-        setTimeout(()=> {
-            
-            transition_el.classList.remove('is-active');
-        },100)
-
-    }
-
-    // Jos näytön koko muuttuu käytön aikana niin sivu lataa itsensä uudestaan
-    window.onresize = function () {
-        if (window.innerWidth != -10) {
-            location.reload();
-        }
-    }
-
-}
 
 // Funktio jolla tulee tekstit näkyviin kun tarpeeksi scrollaa
 function scrollAnimation () {
@@ -232,7 +172,7 @@ function main () {
     // muilla sivuilla käynnistyy sivunvaihto ja navbar functiot
     } else {
         
-        pageTransition();
+        
         
         
         
